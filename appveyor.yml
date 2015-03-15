@@ -36,6 +36,7 @@ init:
 
 build_script:
 - '"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd"'
+- C:\MinGW\msys\1.0\bin\bash -lc "cl.exe /? 2>&1 | head -n 2"
 - set CCCL_OPTIONS=-FS
 - C:\MinGW\msys\1.0\bin\bash -lc "echo \"C:/MinGW /mingw\" > /etc/fstab"
 - C:\MinGW\msys\1.0\bin\bash -lc "cp /c/pthreads-win32/Pre-built.2/dll/x86/*.dll /c/openvswitch/."
