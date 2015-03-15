@@ -35,6 +35,7 @@ init:
     cd C:\openvswitch
 
 build_script:
+- set
 - '"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd"'
 - C:\MinGW\msys\1.0\bin\bash -lc "cl.exe /? 2>&1 | head -n 2"
 - set CCCL_OPTIONS=-FS
@@ -43,4 +44,5 @@ build_script:
 - C:\MinGW\msys\1.0\bin\bash -lc "mv /bin/link.exe /bin/link_copy.exe"
 - C:\MinGW\msys\1.0\bin\bash -lc "cd /c/openvswitch && ./boot.sh"
 - C:\MinGW\msys\1.0\bin\bash -lc "cd /c/openvswitch && ./configure CC=build-aux/cccl LD=\"`which link`\" LIBS=-lws2_32 --with-pthread=C:/pthreads-win32/Pre-built.2 --with-openssl=C:/OpenSSL-Win32 --with-vstudioddk=\"Win8.1 Debug\""
-- C:\MinGW\msys\1.0\bin\bash -lc "cd /c/openvswitch && make"
+- C:\MinGW\msys\1.0\bin\bash -lc "cat config.log"
+#- C:\MinGW\msys\1.0\bin\bash -lc "cd /c/openvswitch && make"
